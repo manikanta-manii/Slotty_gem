@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+<%= @current_time %>
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+<div id="posts">
+  <% @slots.each do |el|  %>
+    <%= el[:time]%>
+  <% end %>
+</div>
+
+<%= link_to "New post", new_post_path %>
